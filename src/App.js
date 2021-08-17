@@ -71,7 +71,7 @@ export default function App() {
         for (var i = 0; i < noOfRows; i++) {
           newSeatList[i] = catogory.seats.slice(i * 8 + 0, i * 8 + 8);
         }
-
+        console.log(newSeatList);
         return (
           <div className="seats-section">
             <h4>{catogory.name}</h4>
@@ -82,7 +82,7 @@ export default function App() {
                   const isOccupied = catogory.occupied.indexOf(seat) > -1;
                   return (
                     <div
-                      key={seat}
+                      key={`seat-${seat + j}`}
                       className={`seat ${isSelected ? "selected" : ""} ${
                         isOccupied ? "occupied" : ""
                       }`}
@@ -104,7 +104,6 @@ export default function App() {
       <div className="total">
         <span> Seats Count: {selectedSeats.length}</span>{" "}
         <span>
-          {" "}
           Price: $
           {selectedCatogory ? selectedSeats.length * selectedCatogory.price : 0}
         </span>
