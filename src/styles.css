@@ -22,10 +22,10 @@ body {
   margin: 4px 6px;
   border: 1px solid #ddd;
   border-radius: 4px;
-  background-color: #d2d2d2;
+  background-color: white;
 }
 .seat.occupied {
-  background-color: white !important;
+  background-color: #d2d2d2 !important;
 }
 .seat.selected {
   background-color: blue !important;
